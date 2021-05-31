@@ -2,6 +2,6 @@
 	import '../app.css';
 </script>
 
-<div>
+<template>
 	<slot />
-</div>
+</template>
