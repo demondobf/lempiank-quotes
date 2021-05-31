@@ -4,7 +4,7 @@
 </script>
 
 <template>
-	<a href={LEMPIANK_INSTAGRAM} rel="noopener noreferrer" target="_blank" transition:fade>
+	<a href={LEMPIANK_INSTAGRAM} rel="noopener noreferrer" target="_blank" in:fade>
 		<picture>
 			<source srcset="images/lempiank.webp" type="image/webp" />
 			<img src="images/lempiank.png" alt="Lempiank" width="500" height="500" />
