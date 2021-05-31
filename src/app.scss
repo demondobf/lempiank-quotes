@@ -1,93 +1,93 @@
 :root {
-	--color-text: #131313;
-	--color-bg: #f6f6f6;
+  --color-text: #131313;
+  --color-bg: #f6f6f6;
 }
 
 *,
 *::before,
 *::after {
-	margin: unset;
-	box-sizing: border-box;
+  margin: unset;
+  box-sizing: border-box;
 }
 
 ::selection {
-	color: var(--color-bg);
-	background-color: var(--color-text);
+  color: var(--color-bg);
+  background-color: var(--color-text);
 }
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	color: var(--color-text);
-	background-color: var(--color-bg);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
-	font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-	font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 300;
 }
 
 #svelte {
-	max-width: 1600px;
-	margin: 0 auto;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 img {
-	height: auto;
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 button {
-	position: relative;
-	border: 1px solid #131313;
-	background-color: var(--color-bg);
+  position: relative;
+  border: 1px solid #131313;
+  background-color: var(--color-bg);
 
-	&:not(:disabled) {
-		cursor: pointer;
-	}
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
 
-		width: 100%;
-		height: 100%;
+    width: 100%;
+    height: 100%;
 
-		background-color: var(--color-bg);
-		mix-blend-mode: difference;
+    background-color: var(--color-bg);
+    mix-blend-mode: difference;
 
-		transform: scale(0);
-		transition: transform 300ms ease;
-	}
+    transform: scale(0);
+    transition: transform 300ms ease;
+  }
 
-	&:hover,
-	&:focus {
-		border-color: transparent;
+  &:hover,
+  &:focus {
+    border-color: transparent;
 
-		&::after {
-			transform: scale(1);
-		}
-	}
+    &::after {
+      transform: scale(1);
+    }
+  }
 }
 
 button,
 a {
-	outline: 0;
-	transition: 300ms ease;
-	-webkit-tap-highlight-color: transparent;
+  outline: 0;
+  transition: 300ms ease;
+  -webkit-tap-highlight-color: transparent;
 
-	&:focus,
-	&:hover {
-		filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
-	}
+  &:focus,
+  &:hover {
+    filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+  }
 }
 
 @keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
