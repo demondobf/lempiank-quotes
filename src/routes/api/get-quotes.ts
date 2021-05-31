@@ -2,21 +2,17 @@ import { getQuotesList } from '$lib/utils';
 
 interface GetQuotesResponse {
 	body: {
-		quotes: Quote[];
+		quotes: IQuote[];
 	};
 }
 
-interface Quote {
-	date: string;
-	text: string;
-}
-
-export async function get(): Promise<GetQuotesResponse> {
-	const res = await fetch(import.meta.env.VITE_QUOTES_URL).then((res) => res.text());
+export const get = async (): Promise<GetQuotesResponse> => {
+	const res = await fetch(import.meta.env.VITE_QUOTES_URL);
+	const text = await res.text();
 
 	return {
 		body: {
-			quotes: getQuotesList(res)
+			quotes: getQuotesList(text)
 		}
 	};
-}
+};

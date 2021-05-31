@@ -1,4 +1,4 @@
-export const getQuotesList = (tsvString: string): { date: string; text: string }[] => {
+export const getQuotesList = (tsvString: string): IQuote[] => {
 	const entries = tsvString.split('\n').map((entry) => {
 		const [date, text] = entry.split('\t');
 
