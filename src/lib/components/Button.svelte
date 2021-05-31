@@ -32,8 +32,11 @@
       animation: spin 1s ease infinite paused;
     }
 
-    &:hover > * {
-      animation-play-state: running;
+    &:hover,
+    &:focus {
+      & > * {
+        animation-play-state: running;
+      }
     }
   }
 
