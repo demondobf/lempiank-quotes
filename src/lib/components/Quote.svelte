@@ -21,7 +21,7 @@
   }
 
   .text {
-    font-size: clamp(2.5rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 3vw, 4rem);
     margin-bottom: 0.25em;
   }
 
