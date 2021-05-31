@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: unset;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	color: #131313;
+	background-color: #f6f6f6;
+
+	font-family: 'Montserrat', system-ui, sans-serif;
+	font-weight: 300;
+}
+
+::selection {
+	color: #f6f6f6;
+	background-color: #131313;
+}
+
+#svelte {
+	max-width: 1600px;
+	margin: 0 auto;
+}
