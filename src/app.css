@@ -1,27 +1,46 @@
+:root {
+	--color-text: #131313;
+	--color-bg: #f6f6f6;
+}
+
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
 	margin: unset;
+	box-sizing: border-box;
+}
+
+::selection {
+	color: var(--color-bg);
+	background-color: var(--color-text);
 }
 
 body {
 	margin: 0;
 	padding: 0;
 
-	color: #131313;
-	background-color: #f6f6f6;
+	color: var(--color-text);
+	background-color: var(--color-bg);
 
-	font-family: 'Montserrat', system-ui, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 	font-weight: 300;
-}
-
-::selection {
-	color: #f6f6f6;
-	background-color: #131313;
 }
 
 #svelte {
 	max-width: 1600px;
 	margin: 0 auto;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
