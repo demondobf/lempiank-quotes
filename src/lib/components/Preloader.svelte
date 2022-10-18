@@ -8,6 +8,4 @@
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 </script>
 
-<template>
-  <h1>{randomMessage}</h1>
-</template>
+<h1>{randomMessage}</h1>

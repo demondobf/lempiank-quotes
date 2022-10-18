@@ -3,14 +3,12 @@
   import { fade } from 'svelte/transition';
 </script>
 
-<template>
-  {#each [quote] as quote (quote)}
-    <div class="wrapper" in:fade>
-      <h1 class="text">{quote.text}</h1>
-      <time class="date" datetime={quote.date}>{quote.date}</time>
-    </div>
-  {/each}
-</template>
+{#each [quote] as quote (quote)}
+  <div class="wrapper" in:fade>
+    <h1 class="text">{quote.text}</h1>
+    <time class="date" datetime={quote.date}>{quote.date}</time>
+  </div>
+{/each}
 
 <style lang="scss">
   .wrapper {

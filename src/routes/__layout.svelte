@@ -2,6 +2,4 @@
   import '../app.scss';
 </script>
 
-<template>
-  <slot />
-</template>
+<slot />

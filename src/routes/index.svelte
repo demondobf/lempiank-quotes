@@ -22,23 +22,21 @@
   };
 </script>
 
-<template>
-  <main class="wrapper">
-    {#if !isError && quotes.length}
-      <Quote quote={quotes[currentQuote]} />
-      <Photo />
-      <Button onClick={changeQuote} />
-    {/if}
+<main class="wrapper">
+  {#if !isError && quotes.length}
+    <Quote quote={quotes[currentQuote]} />
+    <Photo />
+    <Button onClick={changeQuote} />
+  {/if}
 
-    {#if !isError && !quotes.length}
-      <Preloader />
-    {/if}
+  {#if !isError && !quotes.length}
+    <Preloader />
+  {/if}
 
-    {#if isError}
-      <h1>Something is not yes ಥ_ಥ</h1>
-    {/if}
-  </main>
-</template>
+  {#if isError}
+    <h1>Something is not yes ಥ_ಥ</h1>
+  {/if}
+</main>
 
 <style lang="scss">
   .wrapper {
