@@ -3,6 +3,11 @@
   import { LEMPIANK_INSTAGRAM } from '$lib/constants';
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="images/lempiank.webp">
+	<link rel="preload" as="image" href="images/lempiank.png">
+</svelte:head>
+
 <a href={LEMPIANK_INSTAGRAM} rel="noopener noreferrer" target="_blank" in:fade>
   <picture>
     <source srcset="images/lempiank.webp" type="image/webp" />
