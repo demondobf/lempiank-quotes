@@ -19,6 +19,8 @@ jobs:
         run: |
           touch .env
           echo QUOTES_COLLECTION_URL=${{ secrets.QUOTES_COLLECTION_URL }} >> .env
+      - name: 'List files'
+        run: 'ls -la'
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
