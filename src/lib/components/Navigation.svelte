@@ -16,7 +16,7 @@
 	<span class="sr-only">cytat</span>
 </Button>
 
-<span class="min-w-[12ch] whitespace-nowrap text-center">
+<span class="min-w-[12ch] whitespace-nowrap text-center" data-testid="current-quote-indicator">
 	{currentQuoteIndex + 1} / {quotesCount}
 </span>
 
