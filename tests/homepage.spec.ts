@@ -1,10 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-test.beforeEach(async ({ page }) => {
-	await page.goto('/');
-});
-
 test('quotes reading', async ({ page }) => {
+	await page.goto('/');
+
 	const quoteTextContainer = page.getByRole('heading', { level: 1 });
 	const initialQuoteTextContent = (await quoteTextContainer.textContent()) as string;
 
@@ -32,6 +30,8 @@ test('quotes reading', async ({ page }) => {
 });
 
 test('lempiank discoverability', async ({ page }) => {
+	await page.goto('/');
+
 	const instagramLink = page.getByRole('link', { name: 'Odwiedź Instagram Lempiank' });
 
 	await expect(instagramLink).toHaveAttribute('href', 'https://www.instagram.com/lempiank/');
