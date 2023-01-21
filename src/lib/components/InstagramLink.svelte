@@ -8,8 +8,9 @@
 	rel="noopener noreferrer"
 	target="_blank"
 >
+	<span class="sr-only">Odwiedź Instagram</span>
 	<picture>
 		<source srcset="images/lempiank.webp" type="image/webp" />
-		<img src="images/lempiank.png" alt="Lempiank" width="500" height="500" />
+		<img class="bg-neutral-700" src="images/lempiank.png" alt="Lempiank" width="500" height="500" />
 	</picture>
 </ExternalLink>
