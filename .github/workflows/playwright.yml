@@ -15,17 +15,12 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: 'Create .env file'
-        run: |
-          touch .env
-          echo QUOTES_COLLECTION_URL=${{ secrets.QUOTES_COLLECTION_URL }} >> .env
-          cat .env
-      - name: 'List files'
-        run: 'ls -la'
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          QUOTES_COLLECTION_URL: ${{ secrets.QUOTES_COLLECTION_URL }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
