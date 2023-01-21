@@ -1,10 +1,10 @@
 import type { PageServerLoad } from './$types';
-import { QUOTES_COLLECTION_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { error } from '@sveltejs/kit';
 import { transformToQuotes } from '$lib/helpers/transform-to-quotes';
 
 export const load = (async () => {
-	const response = await fetch(QUOTES_COLLECTION_URL);
+	const response = await fetch(env.QUOTES_COLLECTION_URL);
 
 	if (!response.ok) {
 		throw error(500, 'Bad fetch response');
