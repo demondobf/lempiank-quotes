@@ -1,12 +1,11 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
-import * as dotenv from 'dotenv';
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-dotenv.config();
+// dotenv.config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -100,7 +99,7 @@ const config: PlaywrightTestConfig = {
 
 	/* Run your local dev server before starting the tests */
 	webServer: {
-		command: 'yarn run preview',
+		command: 'yarn run build && yarn run preview',
 		port: 4173,
 		timeout: 60 * 1000 * 10,
 		reuseExistingServer: !process.env.CI
