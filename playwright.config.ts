@@ -99,7 +99,7 @@ const config: PlaywrightTestConfig = {
 
 	/* Run your local dev server before starting the tests */
 	webServer: {
-		command: 'pnpm run build && pnpm run preview',
+		command: 'yarn run build && yarn run preview',
 		port: 4173,
 		timeout: 60 * 1000,
 		reuseExistingServer: !process.env.CI
