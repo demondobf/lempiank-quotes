@@ -22,7 +22,7 @@
 	};
 </script>
 
-<main class="mx-auto flex min-h-screen max-w-lg flex-col p-8 lg:max-w-screen-2xl">
+<main class="mx-auto flex min-h-full max-w-lg flex-col p-8 lg:max-w-screen-2xl">
 	<div class="lg:gap-12' mb-auto flex flex-col gap-8 lg:mt-auto lg:flex-row-reverse lg:items-center lg:justify-center">
 		<InstagramLink />
 		{#if hasQuotes}
