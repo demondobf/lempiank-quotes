@@ -33,7 +33,7 @@
 	</div>
 
 	{#if hasQuotes}
-		<div class="flex items-center justify-between gap-4 lg:justify-start">
+		<div class="mt-8 flex items-center justify-between gap-4 lg:justify-start">
 			<Navigation {quotesCount} {currentQuoteIndex} on:previous={goToPreviousQuote} on:next={goToNextQuote} />
 		</div>
 	{/if}
